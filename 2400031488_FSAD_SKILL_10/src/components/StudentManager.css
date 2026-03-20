@@ -1,0 +1,32 @@
+.container {
+  width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.form input {
+  margin: 5px;
+  padding: 8px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.delete {
+  background: red;
+  color: white;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid gray;
+  padding: 10px;
+}
