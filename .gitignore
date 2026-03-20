@@ -1,0 +1,24 @@
+# IDE Metadata
+.metadata/
+.vscode/
+.settings/
+.project
+.classpath
+.factorypath
+
+# Build Directories
+bin/
+target/
+build/
+out/
+
+# Dependencies
+node_modules/
+dist/
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
