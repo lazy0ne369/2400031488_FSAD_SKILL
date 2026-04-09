@@ -7,6 +7,20 @@ import Register from './components/Register'
 import { getUserProfile, loginUser, registerUser } from './services/authApi'
 import './App.css'
 
+const getErrorMessage = (error, fallbackMessage) => {
+  const responseData = error.response?.data
+
+  if (typeof responseData === 'string' && responseData.trim()) {
+    return responseData
+  }
+
+  if (responseData?.message) {
+    return responseData.message
+  }
+
+  return fallbackMessage
+}
+
 function App() {
   const [currentView, setCurrentView] = useState('login')
   const [storedUsername, setStoredUsername] = useState(
@@ -65,7 +79,7 @@ function App() {
       setCurrentView('login')
       return true
     } catch (error) {
-      setMessage(error.response?.data?.message || 'Registration failed.')
+      setMessage(getErrorMessage(error, 'Registration failed.'))
       return false
     } finally {
       setLoading(false)
@@ -88,7 +102,7 @@ function App() {
       setMessage('')
       return true
     } catch (error) {
-      setMessage(error.response?.data?.message || 'Login failed.')
+      setMessage(getErrorMessage(error, 'Login failed.'))
       return false
     } finally {
       setLoading(false)
