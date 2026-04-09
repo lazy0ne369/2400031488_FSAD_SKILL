@@ -12,6 +12,11 @@
 - [skill8-jpql-query](./2400031488_FSAD_SKILL_08/)
 - [skill9-global-exception](./2400031488_FSAD_SKILL_09/)
 - [skill10-react-usestate](./2400031488_FSAD_SKILL_10/)
+- [skill11-react-api-integration](./2400031488_FSAD_SKILL_11/)
+- [skill12-fullstack-crud](./2400031488_FSAD_SKILL_12/)
+- [skill13-fullstack-deployment](./2400031488_FSAD_SKILL_13/)
+- [skill14-auth-session-management](./2400031488_FSAD_SKILL_14/)
+- [skill15-jwt-role-authorization](./2400031488_FSAD_SKILL_15/)
 
 ---
 
@@ -27,3 +32,8 @@
 **SKILL - 8** ➔ Spring Boot – JPQL & Query Methods Module  
 **SKILL - 9** ➔ Global Exception Handling using @ControllerAdvice  
 **SKILL - 10** ➔ React State Management using useState Object  
+**SKILL - 11** ➔ React API Integration - Fetching Data Using Fetch API, Axios & Local JSON  
+**SKILL - 12** ➔ Full-Stack CRUD Application using React & Spring Boot  
+**SKILL - 13** ➔ Deployment of Full-Stack Application (Spring Boot + React)  
+**SKILL - 14** ➔ User Authentication & Session Management using React & Spring Boot  
+**SKILL - 15** ➔ Implementing JWT-Based Authentication & Role Authorization  
