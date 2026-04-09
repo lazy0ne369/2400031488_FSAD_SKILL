@@ -1,38 +1,331 @@
-.App {
+.app-shell {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero-panel,
+.workspace-panel,
+.content-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.hero-panel {
+  padding: 2rem;
+  background:
+    radial-gradient(circle at top right, rgba(214, 101, 55, 0.16), transparent 32%),
+    linear-gradient(135deg, rgba(11, 73, 112, 0.98), rgba(20, 119, 98, 0.92));
+  color: #f6f9fb;
+}
+
+.hero-panel h1 {
+  margin: 0.4rem 0 0.8rem;
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.6rem);
+}
+
+.hero-tag,
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero-copy {
+  max-width: 44rem;
+  color: rgba(246, 249, 251, 0.9);
+}
+
+.dashboard-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-strong);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.nav-link small {
+  color: var(--text-soft);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  background: rgba(255, 247, 238, 0.98);
+}
+
+.workspace-panel {
+  padding: 1.6rem;
+}
+
+.workspace-header {
+  margin-bottom: 1.2rem;
+}
+
+.workspace-header h2,
+.panel-heading h2,
+.list-summary h3,
+.toolbar h3,
+.info-card h3,
+.data-card h4 {
+  margin: 0;
+}
+
+.workspace-header p,
+.toolbar p,
+.data-card p,
+.info-card p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.content-card {
+  padding: 1.4rem;
+}
+
+.panel-heading {
+  margin-bottom: 1rem;
+}
+
+.crud-layout {
+  margin-bottom: 1.4rem;
+}
+
+.form-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.15rem;
+  border-radius: 22px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #fffdf9, #fff8ef);
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--text-strong);
+  font-weight: 600;
+}
+
+.field-span-full {
+  grid-column: 1 / -1;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.8rem 0.95rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+  color: var(--text-strong);
+  font: inherit;
+  resize: vertical;
+}
+
+.button-row,
+.card-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.support-text {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.overview-grid,
+.user-grid,
+.post-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.overview-grid,
+.user-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.post-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.info-card,
+.data-card {
+  padding: 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+}
+
+.data-card {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.data-card strong {
+  color: var(--text-strong);
+}
+
+.post-card {
+  align-content: start;
+}
+
+.post-meta {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(231, 126, 35, 0.14);
+  color: #9a4f0f;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.list-summary,
+.toolbar,
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.list-summary {
+  margin-bottom: 1rem;
+}
+
+.list-summary span {
+  font-weight: 600;
+  color: var(--text-soft);
+}
+
+.toolbar {
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.toolbar-actions {
+  flex-wrap: wrap;
+}
+
+.filter-control {
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: var(--text-strong);
+}
+
+.filter-control select,
+.action-button {
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  font: inherit;
+}
+
+.filter-control select {
+  min-width: 170px;
+  padding: 0.75rem 0.9rem;
+  background: #ffffff;
+  color: var(--text-strong);
+}
+
+.action-button {
+  padding: 0.82rem 1.1rem;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  filter: brightness(1.04);
+}
+
+.action-button.secondary {
+  background: #ffffff;
+  color: var(--text-strong);
+}
+
+.action-button.danger {
+  background: #b63f2a;
+}
+
+.empty-state {
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  border: 1px dashed var(--border);
+  color: var(--text-soft);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.status-box {
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(11, 73, 112, 0.16);
+  background: rgba(11, 73, 112, 0.08);
+  color: #0b4970;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.status-box.error {
+  border-color: rgba(194, 57, 36, 0.22);
+  background: rgba(194, 57, 36, 0.08);
+  color: #9f2e1d;
+}
+
+@media (max-width: 700px) {
+  .hero-panel,
+  .workspace-panel,
+  .content-card {
+    border-radius: 22px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .workspace-panel,
+  .hero-panel,
+  .content-card {
+    padding: 1.2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .list-summary,
+  .toolbar,
+  .toolbar-actions,
+  .button-row,
+  .card-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .action-button,
+  .filter-control select {
+    width: 100%;
   }
 }

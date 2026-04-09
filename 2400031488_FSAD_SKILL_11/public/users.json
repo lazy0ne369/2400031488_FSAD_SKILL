@@ -1,7 +1,38 @@
 [
-  { "id": 1, "name": "Drac", "email": "drac@gmail.com", "phone": "9876543210" },
-  { "id": 2, "name": "John", "email": "john@gmail.com", "phone": "9876543211" },
-  { "id": 3, "name": "Alice", "email": "alice@gmail.com", "phone": "9876543212" },
-  { "id": 4, "name": "Bob", "email": "bob@gmail.com", "phone": "9876543213" },
-  { "id": 5, "name": "Emma", "email": "emma@gmail.com", "phone": "9876543214" }
+  {
+    "id": 1,
+    "name": "Aarav Mehta",
+    "email": "aarav.mehta@newshub.in",
+    "phone": "+91 98480 12345"
+  },
+  {
+    "id": 2,
+    "name": "Diya Reddy",
+    "email": "diya.reddy@newshub.in",
+    "phone": "+91 98480 22345"
+  },
+  {
+    "id": 3,
+    "name": "Kiran Varma",
+    "email": "kiran.varma@newshub.in",
+    "phone": "+91 98480 32345"
+  },
+  {
+    "id": 4,
+    "name": "Nisha Patel",
+    "email": "nisha.patel@newshub.in",
+    "phone": "+91 98480 42345"
+  },
+  {
+    "id": 5,
+    "name": "Rohan Iyer",
+    "email": "rohan.iyer@newshub.in",
+    "phone": "+91 98480 52345"
+  },
+  {
+    "id": 6,
+    "name": "Sneha Kulkarni",
+    "email": "sneha.kulkarni@newshub.in",
+    "phone": "+91 98480 62345"
+  }
 ]
